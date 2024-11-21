@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Upload Result</title>
+  <style>
+    /* General page styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 2em;
+      margin-top: 20px;
+    }
+
+    /* Container for messages */
+    .message, .error {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .message {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    /* Link styling */
+    a {
+      display: inline-block;
+      text-align: center;
+      font-size: 1.2em;
+      text-decoration: none;
+      color: #4CAF50;
+      background-color: #e7f8e7;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin: 30px auto;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    a:hover {
+      background-color: #4CAF50;
+      color: white;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+
+<h1 th:if="${message}" th:text="${message}"></h1>
+<h1 th:if="${error}" th:text="${error}"></h1>
+
+<!-- Button to view all books -->
+<a href="/books" class="btn-view-books">View All Books</a>
+
+</body>
+</html>
